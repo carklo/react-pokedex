@@ -10,7 +10,6 @@ import {useStyles} from "../App";
 const PokemonList = ({pokemonList}) => {
 
     const classes = useStyles();
-    console.log(pokemonList)
     const pokeList = Object.values(pokemonList);
     const pokeGrid = pokeList.map(data => (
         <Grid item key={data.id} xs={12} sm={6} md={4}>

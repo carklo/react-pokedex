@@ -137,21 +137,19 @@ class App extends Component  {
     };
 
     previousPage = () => {
-        fetch(`https://pokedexmodyospring.herokuapp.com/${this.state.previous}`)
+        fetch(`https://pokedexmodyospring.herokuapp.com/pokemonList/${this.state.previous}`)
             .then(res => res.json())
             .then((data) => {
                 this.setState({ pokemonList: data.pokemonList, previous: data.previous, next: data.next})
-                console.log(this.state.pokemonList)
             })
             .catch(console.log)
     }
 
     nextPage = () => {
-        fetch(`hhttps://pokedexmodyospring.herokuapp.com/${this.state.next}`)
+        fetch(`https://pokedexmodyospring.herokuapp.com/pokemonList/${this.state.next}`)
             .then(res => res.json())
             .then((data) => {
                 this.setState({ pokemonList: data.pokemonList, previous: data.previous, next: data.next})
-                console.log(this.state.pokemonList)
             })
             .catch(console.log)
     }
@@ -161,7 +159,6 @@ class App extends Component  {
             .then(res => res.json())
             .then((data) => {
                 this.setState({ pokemonList: data.pokemonList, previous: data.previous, next: data.next})
-                console.log(this.state.pokemonList)
             })
             .catch(console.log)
 
